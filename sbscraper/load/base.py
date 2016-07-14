@@ -2,6 +2,7 @@
 """Loaders put data into some data store."""
 
 import abc
+import logging
 
 
 class Loader(object):
