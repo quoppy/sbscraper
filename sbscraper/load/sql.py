@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """SQL-based Loaders."""
 
-import logging
-import os
 import sqlite3
 
 from sbscraper import escape
