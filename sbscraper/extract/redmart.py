@@ -19,13 +19,10 @@ class RedMartExtractor(base.Extractor):
 
     def has_more(self, response):
         data = response.data
-        if ('page' in data and
-                'page_size' in data and
-                'total' in data):
+        if 'page' in data and 'total' in data:
             page = data['page']
-            page_size = data['page_size']
             total = data['total']
-            return (page + 1) * page_size < total
+            return (page + 1) * self.page_size < total
         return False
 
     def request(self, category, page, page_size):
