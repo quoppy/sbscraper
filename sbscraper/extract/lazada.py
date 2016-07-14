@@ -30,7 +30,8 @@ class LazadaExtractor(base.Extractor):
             product_url = urlparse.urljoin(self.url, product_url)
             futures.append(self.session.get(product_url,
                                             background_callback=_add_soup))
-        for result in concurrent.futures.as_completed(futures):
+        for future in concurrent.futures.as_completed(futures):
+            result = future.result()
             detail = result.data.find('div', itemscope=True,
                                       itemtype='http://schema.org/Product')
             datum = copy.copy(detail)
@@ -40,7 +41,7 @@ class LazadaExtractor(base.Extractor):
         pages = response.data.select('span.pages > a')
         if pages:
             last_page = pages[-1]
-            return 'active_1' in last_page['class']
+            return 'active_1' not in last_page.get('class', [])
         return False
 
     def request(self, category, page, page_size):
