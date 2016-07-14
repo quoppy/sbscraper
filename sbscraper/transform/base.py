@@ -6,8 +6,8 @@ import abc
 from sbscraper import product
 
 
-class ProductTransformer(object):
-    """Base class for Transformers that convert data to a :class:`Product`."""
+class Transformer(object):
+    """Base class for Transformers."""
 
     __metaclass__ = abc.ABCMeta
 
@@ -35,6 +35,10 @@ class ProductTransformer(object):
     def get_title(self, datum):
         """Returns the title for a product."""
         pass
+
+
+class ProductTransformer(object):
+    """Transformes data to a :class:`Product`."""
 
     def transform(self, datum):
         """Converts unit of data to a :class:`Product`.

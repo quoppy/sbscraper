@@ -5,6 +5,7 @@ from sbscraper.transform import base
 
 
 class RedMartProductTransformer(base.ProductTransformer):
+    """Transforms RedMart data to :class:`Product` instances."""
 
     API_VERSION = 'v1.5.6'
 
