@@ -4,14 +4,14 @@
 import decimal
 import json
 
-from .product import Product
+from sbscraper import product
 
 
 PRODUCT_TYPE = '__product__'
 
 
 def product_default(item):
-    if isinstance(item, Product):
+    if isinstance(item, product.Product):
         result = dict(item)
         result[PRODUCT_TYPE] = True
         return result
@@ -21,7 +21,7 @@ def product_default(item):
 def product_object_hook(mapping):
     if PRODUCT_TYPE in mapping and mapping[PRODUCT_TYPE]:
         del mapping[PRODUCT_TYPE]
-        return Product(**mapping)
+        return product.Product(**mapping)
     return mapping
 
 
