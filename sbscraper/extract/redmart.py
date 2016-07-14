@@ -14,7 +14,7 @@ class RedMartExtractor(base.Extractor):
                                                start_page=start_page,
                                                page_size=page_size)
 
-    def get_products(self, response):
+    def get_data(self, response):
         return response.data.get('products', [])
 
     def has_more(self, response):
@@ -38,5 +38,3 @@ class RedMartExtractor(base.Extractor):
         response = self.session.get(url, params=parameters)
         response.data = response.json()
         return response
-
-

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import copy
 import urlparse
 
 import bs4
@@ -19,7 +20,7 @@ class LazadaExtractor(base.Extractor):
         self.session = requests_futures.sessions.FuturesSession(
             session=self.session, max_workers=max_workers)
 
-    def get_products(self, response):
+    def get_data(self, response):
         products = response.data.find_all('div', class_='product-card')
         futures = []
         for product in products:
@@ -29,7 +30,11 @@ class LazadaExtractor(base.Extractor):
             product_url = urlparse.urljoin(self.url, product_url)
             futures.append(self.session.get(product_url,
                                             background_callback=_add_soup))
-        return concurrent.futures.as_completed(futures)
+        for result in concurrent.futures.as_completed(futures):
+            detail = result.data.find('div', itemscope=True,
+                                      itemtype='http://schema.org/Product')
+            datum = copy.copy(detail)
+            yield datum
 
     def has_more(self, response):
         pages = response.data.select('span.pages > a')

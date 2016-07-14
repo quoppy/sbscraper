@@ -18,7 +18,7 @@ class Extractor(object):
         self.page_size = page_size
 
     @abc.abstractmethod
-    def get_products(self, response):
+    def get_data(self, response):
         pass
 
     @abc.abstractmethod
@@ -35,8 +35,8 @@ class Extractor(object):
             page = start_page or self.start_page
             while True:
                 response = self.request(category, page, page_size)
-                for product in self.get_products(response):
-                    yield product
+                for datum in self.get_data(response):
+                    yield datum
                 if not self.has_more(response):
                     break
                 page += 1
