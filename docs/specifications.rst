@@ -2,12 +2,12 @@ Specifications
 ==============
 
 Task
-====
+----
 Crawl and parse all products of one category (such as fashion, electronics) from
 two e-commerce websites (i.e., Shopback, Lazada, or Redmart).
 
 Requirements
-============
+------------
 * Python 2.7
 * Object-oriented style
 * Include unit tests
@@ -24,7 +24,7 @@ Requirements
     * attributes
 
 Optional Questions
-==================
+------------------
 * How to handle project settings?
 * How to avoid duplicate code?
 * How to design the system in a flexible and scalable way?

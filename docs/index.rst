@@ -10,7 +10,10 @@ Scrapes e-commerce websites for product information.
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
+
+   specifications
+   modules
 
 
 
