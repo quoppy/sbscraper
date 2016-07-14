@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Serialisation and escape-related functions."""
 
+import decimal
 import json
 
 from .product import Product
@@ -24,8 +25,10 @@ def product_object_hook(mapping):
     return mapping
 
 
-def from_json(value, object_hook=product_object_hook, **kwargs):
-    return json.loads(value, object_hook=object_hook, **kwargs)
+def from_json(value, object_hook=product_object_hook,
+              parse_float=decimal.Decimal, **kwargs):
+    return json.loads(value, object_hook=object_hook, parse_float=parse_float,
+                      **kwargs)
 
 
 def to_json(item, default=product_default, **kwargs):
