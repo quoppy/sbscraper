@@ -5,4 +5,7 @@ from sbscraper import __version__
 
 setup(name='sbscraper',
       version=__version__,
-      packages=['sbscraper'])
+      packages=['sbscraper'],
+      entry_points = {
+            'console_scripts': ['sbscraper=sbscraper.executable:main'],
+      })
