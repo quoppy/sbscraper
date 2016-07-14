@@ -6,7 +6,23 @@ from sbscraper.extract import base
 
 
 class RedMartExtractor(base.Extractor):
+    """Extracts data from RedMart.
 
+    RedMart has a versioned REST API that returns JSON similar to the form::
+
+        {
+            'products': [
+                {
+                    'description': 'Some product.',
+                    'title': 'Product title.'
+                }
+            ],
+            'page': 1,
+            'total': 12
+        }
+    """
+
+    # RedMart uses a versioned REST API.
     API_VERSION = 'v1.5.6'
 
     def __init__(self, url, categories=None, start_page=0, page_size=50):
@@ -15,7 +31,8 @@ class RedMartExtractor(base.Extractor):
                                                page_size=page_size)
 
     def get_data(self, response):
-        return response.data.get('products', [])
+        for datum in response.data.get('products', []):
+            yield datum
 
     def has_more(self, response):
         data = response.data
