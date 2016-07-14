@@ -4,7 +4,7 @@ from sbscraper import product
 from sbscraper.transform import base
 
 
-class RedMartTransformer(base.Transformer):
+class RedMartProductTransformer(base.ProductTransformer):
 
     API_VERSION = 'v1.5.6'
 
