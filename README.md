@@ -1,2 +1,2 @@
 # sbscraper
-Shopback Scraper
+Scrapes e-commerce websites for product information.
