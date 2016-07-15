@@ -5,7 +5,7 @@ from sbscraper.transform import base
 
 
 class RedMartProductTransformer(base.ProductTransformer):
-    """Transforms RedMart data to :class:`Product` instances."""
+    """Transforms RedMart data to :class:`~sbscraper.product.Product`."""
 
     API_VERSION = 'v1.5.6'
 
@@ -17,15 +17,21 @@ class RedMartProductTransformer(base.ProductTransformer):
         pricing = datum.get('pricing', {})
         on_sale = bool(pricing.get('on_sale'))
         if on_sale:
-            return pricing.get('promo_price')
+            price = pricing.get('promo_price')
         else:
-            return pricing.get('price')
+            price = pricing.get('price')
+        if price:
+            price = str(price)
+        return price
 
     def get_description(self, datum):
         return datum.get('desc')
 
     def get_original_price(self, datum):
-        return datum.get('pricing', {}).get('price')
+        price = datum.get('pricing', {}).get('price')
+        if price:
+            price = str(price)
+        return price
 
     def get_title(self, datum):
         return datum.get('title')
