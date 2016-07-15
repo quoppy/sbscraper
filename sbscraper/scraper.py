@@ -15,10 +15,12 @@ class Scraper(object):
         """Constructor.
 
         Arguments:
-            extractor (:class:`Extractor`): Extractor used to get data.
-            transformer (:class:`Transformer`): Converts data from an extractor
-                for a loader.
-            loader (:class:`Loader`): Puts data into a store.
+            extractor (:class:`~sbscraper.extract.base.Extractor`): Extractor
+                used to get data.
+            transformer (:class:`~sbscraper.transform.base.Transformer`):
+                Converts data from an extractor for a loader.
+            loader (:class:`~sbscraper.load.base.Loader`): Puts data into a
+                store.
         """
         self.extractor = extractor
         self.transformer = transformer
