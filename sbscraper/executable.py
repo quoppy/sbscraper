@@ -41,7 +41,7 @@ def configure_stream_logging(logger):
     """Configures logging to output to stderr.
 
     Arguments:
-        logger (:class:`Logger`): Logger to configure.
+        logger (:class:`logging.Logger`): Logger to configure.
     """
     handler = logging.StreamHandler(sys.stderr)
     formatter = logging.Formatter(LOG_FORMAT, LOG_DATE_FORMAT)
@@ -100,7 +100,10 @@ def main():
     transformer = transformer()
     loader = loader(loader_uri)
     scraper = scraper(extractor, transformer, loader)
+
+    logger.info('Starting scraping process')
     scraper.run()
+    logger.info('Done scraping')
 
 
 if __name__ == '__main__':
