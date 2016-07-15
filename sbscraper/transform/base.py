@@ -38,16 +38,16 @@ class Transformer(object):
 
 
 class ProductTransformer(object):
-    """Transformes data to a :class:`Product`."""
+    """Transformes data to a :class:`~sbscraper.product.Product`."""
 
     def transform(self, datum):
-        """Converts unit of data to a :class:`Product`.
+        """Converts unit of data to a :class:`~sbscraper.product.Product`.
 
         Arguments:
             datum: Unit of data to convert.
 
         Returns:
-            :class:`Product`: Product instance.
+            :class:`~sbscraper.product.Product`: Product instance.
         """
         return product.Product(
             title=self.get_title(datum),
