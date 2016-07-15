@@ -1,8 +1,5 @@
 Specifications
 ==============
-
-Task
-----
 Crawl and parse all products of one category (such as fashion, electronics) from
 two e-commerce websites (i.e., Shopback, Lazada, or Redmart).
 
