@@ -4,7 +4,7 @@ from sbscraper.transform import base
 
 
 class LazadaProductTransformer(base.ProductTransformer):
-    """Transforms Lazada data to :class:`Product` instances."""
+    """Transforms Lazada data to :class:`~sbscraper.product.Product`."""
 
     def get_currency(self, datum):
         currency = datum.find(itemprop='priceCurrency')
