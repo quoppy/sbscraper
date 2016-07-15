@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Tests for :class:`SQLiteLoader`."""
+"""Tests for SQLiteLoader."""
 
 import decimal
 
@@ -18,12 +18,12 @@ def uri():
 
 @pytest.fixture
 def loader(uri):
-    """Returns a :class:`SQLiteLoader` instance."""
+    """Returns a SQLiteLoader instance."""
     return sbscraper.load.sql.SQLiteLoader(uri)
 
 
 def test_add(loader):
-    """Tests adding a :class:`Product`."""
+    """Tests adding a Product."""
     product = Product(title='Apple',
                       currency='SGD',
                       price='1.23')
