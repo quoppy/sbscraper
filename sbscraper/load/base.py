@@ -21,9 +21,9 @@ class Loader(object):
 
     @abc.abstractmethod
     def add(self, product):
-        """Adds a :class:`Product` to the data store.
+        """Adds a product to the store.
 
         Arguments:
-            product (:class:`Product`): The :class:`Product` instance to add.
+            product (:class:`~sbscraper.product.Product`): Product to add.
         """
         pass

@@ -28,11 +28,11 @@ class SQLiteLoader(base.Loader):
         self._create_schema()
 
     def add(self, product):
-        """Adds a :class:`Product` to an SQLite database.
+        """Adds a product to an SQLite database.
 
         Arguments:
-            product (:class:`Product`): The :class:`Product` instance to add.
-                Must be convertable to JSON.
+            product (:class:`~sbscraper.product.Product`): Product to add. Must
+                be convertable to JSON.
         """
         as_text = escape.to_json(product)
         try:
