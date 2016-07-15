@@ -8,6 +8,12 @@ sbscraper
 Scrapes e-commerce websites for product information.
 
 
+Installing
+----------
+
+python setup.py install
+
+
 Configuration
 -------------
 The following environment variables control the behaviour of sbscraper.
