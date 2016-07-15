@@ -1,0 +1,102 @@
+{
+    "pricing": {
+        "price": 14.7,
+        "promo_price": 0.0,
+        "on_sale": 0
+    },
+    "id": 55561,
+    "title": "Hakushika Yamadanishiki",
+    "desc": "This sake is brew using 100-Percent Yamadanishiki rice â€“ this rice is often call the â€œking of sake riceâ€. It has good nose, delicate fragrant and a well blended soft flavor.",
+    "measure": {
+        "wt_or_vol": "300 ml",
+        "size": 0.0
+    },
+    "details": {
+        "is_new": 1,
+        "status": 1,
+        "prod_type": 0,
+        "uri": "hakushika-yamadanishiki-55561",
+        "country_of_origin": "Japan",
+        "storage_class": "MartAmbnt"
+    },
+    "images": [{
+        "h": "0",
+        "w": "0",
+        "name": "/i/m/4902051028001_0250_1463466951204.jpg",
+        "position": "0"
+    }, {
+        "h": "0",
+        "w": "0",
+        "name": "/i/m/4902051028001_0251_1463466955306.jpg",
+        "position": "1"
+    }],
+    "warehouse": {
+        "measure": {
+            "vol_metric_alt": "",
+            "vol": 300.0,
+            "wt_metric": "",
+            "vol_metric": "ml",
+            "w": 0.0,
+            "l": 0.0,
+            "h": 0.0
+        }
+    },
+    "sku": "4902051028001",
+    "filters": {
+        "is_organic": 0,
+        "brand_uri": "hakushika",
+        "mfr_name": "HAKUSHIKA",
+        "frequency": 4,
+        "brand_name": "Hakushika",
+        "vendor_name": "MP00401",
+        "country_of_origin": "Japan",
+        "trending_frequency": 2
+    },
+    "categories": [3, 204],
+    "types": [1475],
+    "category_tags": ["alcohol", "sake-umeshu", "sake"],
+    "img": {
+        "h": "0",
+        "w": "0",
+        "name": "/i/m/4902051028001_0250_1463466951204.jpg",
+        "position": "0"
+    },
+    "merchant": {
+        "sub_vendor_id": 401,
+        "sub_vendor_name": "Letat-Wine and Sakes",
+        "sub_vendor_logo": {
+            "name": "marketplace/logos/subvendors/logo-1463476131906.png"
+        }
+    },
+    "inventory": {
+        "atp_status": 1,
+        "max_sale_qty": 48,
+        "qty_in_carts": 0,
+        "qty_in_stock": 48,
+        "stock_status": 1,
+        "stock_type": 3,
+        "atp_lots": [{
+            "qty_in_stock": 115,
+            "stock_status": 1,
+            "qty_in_carts": 0,
+            "from_date": "2016-07-16T06:00:00Z",
+            "to_date": "2017-07-16T06:00:00Z"
+        }],
+        "next_available_date": "2016-07-16T06:00:00Z",
+        "limited_stock_status": 1
+    },
+    "pr": 73,
+    "store": {
+        "id": 336,
+        "name": "Letat-Wine and Sakes",
+        "desc": "Started in 1970, Letat-Wine & Sakes is a leading wine and sakes importer, distributor in Singapore.",
+        "store_type": "Wine and Sakes",
+        "media_assets": {
+            "logo": {
+                "name": "marketplace/logos/subvendors/logo-1463476131906.png",
+                "url": "https://s3-ap-southeast-1.amazonaws.com/media.redmart.com/marketplace/logos/subvendors/logo-1463476131906.png"
+            }
+        },
+        "uri": "letat-wine-and-sakes"
+    }
+}
